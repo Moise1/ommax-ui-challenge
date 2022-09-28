@@ -156,13 +156,13 @@ export const Main = () => {
       <div className="offers-main-container">
         <Container fluid>
           <Row className="call-action">
-            <Col xs={10}>
+            <Col lg={10} xs={12}>
               <h1>
                 We offer end-to-end customs services with fast, accurate and
                 compliant customs in multiple countries
               </h1>
             </Col>
-            <Col xs={2}>
+            <Col lg={2} xs={12}>
               <Button className="in-touch-btn" size="lg">
                 Get in touch
               </Button>
@@ -303,7 +303,7 @@ export const Main = () => {
       <div className="contact-us">
         <Container className="contact-grid-container">
           <Row>
-            <Col lg={8} xs={6}>
+            <Col lg={8} xs={12}>
               <div className="contact-header">
                 <h1>Customs Support - Take the load off your mind</h1>
 
@@ -391,7 +391,7 @@ export const Main = () => {
               </div>
             </Col>
             {/* <div className="vr"></div> */}
-            <Col lg={4} xs={6} className="contact-person-container">
+            <Col lg={4} xs={12} className="contact-person-container">
               <Form className="contact-person">
                 <p>
                   <strong>You prefer a personal contact?</strong>

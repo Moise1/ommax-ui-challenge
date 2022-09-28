@@ -203,6 +203,7 @@
   background: url("../assets/clearance.png") center center no-repeat;
   background-size: cover;
   height: 690px;
+  position: relative;
   .brexit-info {
     padding-top: 5rem;
     h1,
@@ -210,7 +211,6 @@
       color: #fff;
     }
     display: block;
-    // flex-direction: column;
     width: 50%;
     height: 100%;
     background: rgba(27, 211, 200, 0.3);
@@ -295,17 +295,30 @@
 }
 
 // mobile screen size
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   .main {
-    overflow-x: hidden;
-
-    .main-contents{
+    .main-contents {
       width: 100%;
       margin: auto;
     }
   }
 
   .stats{
-    border: 2px solid red;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .customs-clearance {
+    .brexit-info {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      top: 40%;
+    }
+  }
+  
+  .customs-agent{
+    object-fit: contain;
+
   }
 }

@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="footer">
       <Container className="container">
         <Row className="row">
-          <Col className="d-flex mx-2">
+          <Col className="d-flex mx-2" lg={7} >
             <Nav>
               <Nav.Link className="footer-link">Imprint</Nav.Link>
               <Nav.Link className="footer-link">Data Security</Nav.Link>
