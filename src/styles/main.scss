@@ -1,0 +1,30 @@
+// Destkop styles
+
+.main {
+  border: 2px solid blue !important;
+  background: url("../assets/Gruppe maskieren 1.png") center center no-repeat;
+  background-size: cover;
+  height: 690px;
+
+  .main-contents {
+    margin-top: 5rem;
+  }
+  .main-title {
+    color: #fff;
+    font-size: 40px;
+    font-family: 'IBM Plex Sans';
+    font-weight: bold;
+  }
+
+  .horizontal-divider {
+    background:#01a4b7;
+    border: 20px;
+    height: 3px;
+    width: 50px;
+
+  }
+  .main-subtitle {
+    color: #fff;
+    font-size: 16px;
+  }
+}
