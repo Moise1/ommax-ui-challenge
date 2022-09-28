@@ -3,8 +3,18 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import Carousel from "react-bootstrap/Carousel";
+
 import partners from "../assets/partners.png";
 import customsAgent from "../assets/customs-agent.png";
+import accuracy from "../assets/accuracy.png";
+import compliance from "../assets/compliance.png";
+import professionals from "../assets/professionals.png";
+import online from "../assets/online.png";
+import coverage from "../assets/coverage.png";
+import innovation from "../assets/innovation.png";
+import ship from "../assets/ship.png";
+import customsOffice from "../assets/customs-office.png";
 
 import "../styles/main.scss";
 
@@ -99,10 +109,10 @@ export const Main = () => {
       <div className="costoms-records-container">
         <Container fluid>
           <Row className="records-row">
-            <Col className="records-col" xs={6}>
+            <Col className="records-col">
               <Image src={customsAgent} className="customs-agent" />
             </Col>
-            <Col xs={4} className="records-col">
+            <Col className="records-col text">
               <h1>Lorem ipsum dolor sit amet</h1>
               <div className="horizontal-divider"></div>
               <p>
@@ -117,9 +127,9 @@ export const Main = () => {
           </Row>
         </Container>
 
-        <Container fluid>
+        <Container fluid className="second-records-container">
           <Row className="records-row">
-            <Col className="records-col">
+            <Col className="records-col text">
               <h1>Lorem ipsum dolor sit amet</h1>
               <div className="horizontal-divider"></div>
               <p>
@@ -130,13 +140,127 @@ export const Main = () => {
                 takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
                 dolor sit amet, consetetur sadipscing elitr.
               </p>
-              <Button>More information</Button>
+              <Button className="records-btn">More information</Button>
+              <div className="trans-horizontal-divider"></div>
             </Col>
             <Col className="records-col">
               <Image src={customsAgent} className="customs-agent" />
             </Col>
           </Row>
         </Container>
+      </div>
+
+      <div className="offers-main-container">
+        <Container fluid>
+          <Row className="call-action">
+            <Col xs={10}>
+              <h1>
+                We offer end-to-end customs services with fast, accurate and
+                compliant customs in multiple countries
+              </h1>
+            </Col>
+            <Col xs={2}>
+              <Button className="in-touch-btn" size="lg">
+                Get in touch
+              </Button>
+            </Col>
+          </Row>
+          <div className="horizontal-divider"></div>
+        </Container>
+
+        <Container>
+          <Row>
+            <Col>
+              <Image src={accuracy} />
+            </Col>
+            <Col>
+              <Image src={compliance} />
+            </Col>
+            <Col>
+              <Image src={professionals} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Image src={online} />
+            </Col>
+            <Col>
+              <Image src={coverage} />
+            </Col>
+            <Col>
+              <Image src={innovation} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      <div className="carrier-ship">
+        <Image src={ship} className="ship-img" />
+      </div>
+
+      <div className="customs-support-container">
+        <div className="content-header">
+          <h1>
+            Customs Support is a full-service provider for customs services and
+            is here to help
+          </h1>
+          <div className="horizontal-divider"></div>
+        </div>
+
+        <Carousel className="carousel">
+          <Carousel.Item>
+            <Container>
+              <Row>
+                <Col className="carousel-col">
+                  <Image src={customsOffice} />
+
+                  <div className="description">
+                    <h1>Import customs clearance</h1>
+                    <p>
+                      If you would like to import goods from a third country to
+                      within the European Union, Customs Support assists you in
+                      every step of the customs clearance process. Our customs
+                      experts take care of import documents, classification of
+                      import goods with the correct HS code, coordination of
+                      physical inspection and duty management.
+                    </p>
+                  </div>
+                </Col>
+
+                <Col className="carousel-col">
+                  <Image src={customsOffice} />
+
+                  <div className="description">
+                    <h1>Export customs clearance</h1>
+                    <p>
+                      If you would like to export goods from a third country to
+                      within the European Union, Customs Support assists you in
+                      every step of the customs clearance process. Our customs
+                      experts take care of export documents, classification of
+                      export goods with the correct HS code, coordination of
+                      physical inspection and duty management.
+                    </p>
+                  </div>
+                </Col>
+
+                <Col className="carousel-col">
+                  <Image src={customsOffice} />
+
+                  <div className="description">
+                    <h1>Customs transit procedures</h1>
+                    <p>
+                      We assist you in all requirements for different types of
+                      transit procedures and ensure the correct handling of
+                      customs clearance. Our customs experts take care of T1
+                      transit declarations and arrange the transport of the
+                      goods, accompanied by the correct transit documents..
+                    </p>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </Carousel.Item>
+        </Carousel>
       </div>
     </>
   );
