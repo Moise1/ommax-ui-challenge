@@ -3,3 +3,10 @@
 .menu-links {
   margin-left: 2rem;
 }
+
+@media only screen and (max-width: 768px){
+  
+  .menu-burger{
+    background: #1bd3c8;
+  }
+}

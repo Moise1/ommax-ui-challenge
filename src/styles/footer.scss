@@ -1,0 +1,12 @@
+// Desktop styles
+
+.footer{
+    padding: 2rem 0;
+    .container .footer-link{
+        color: #000;
+        font-weight: bold;
+        &:hover{
+            color: #1bd3c8;
+        }
+    }
+}

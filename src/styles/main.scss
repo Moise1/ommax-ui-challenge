@@ -17,7 +17,7 @@
   background: url("../assets/banner.png") center center no-repeat;
   background-size: cover;
   height: 690px;
-
+  width: 100%;
   .main-contents {
     margin: auto 5rem 0 5rem;
     .left-section,
@@ -179,15 +179,133 @@
     }
   }
 
-  .carousel-col .description {
-    margin-top: 1rem;
-    h1 {
-      font-size: 20px;
-      font-weight: bold;
+  .carousel-col {
+    a {
+      text-decoration: none;
+      color: #1bd3c8;
+    }
+    .description {
+      margin-top: 1rem;
+      h1 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.customs-clearance {
+  margin-top: 1rem;
+  background: url("../assets/clearance.png") center center no-repeat;
+  background-size: cover;
+  height: 690px;
+  .brexit-info {
+    padding-top: 5rem;
+    h1,
+    p {
+      color: #fff;
+    }
+    display: block;
+    // flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background: rgba(27, 211, 200, 0.3);
+    & > * {
+      margin: 1rem 0 0 5rem;
     }
 
-    p {
-      font-size: 16px;
+    .brexit-btn {
+      background: #1bd3c8;
+      border: #1bd3c8;
+      &:hover {
+        background: #fff;
+        color: #1bd3c8;
+      }
     }
+  }
+}
+
+.contact-us {
+  background: #006b6e;
+  .horizontal-divider {
+    margin-bottom: 1rem;
+  }
+  .contact-grid-container {
+    padding-top: 2rem;
+
+    // .vr{
+    //   transform: rotate(90deg);
+    //   background: #01a4b7;
+    //   border: 20px;
+    //   height: 3px !important;
+    //   width: 50px;
+    //   display: inline-block;
+    //   align-self: stretch;
+    //   width: 1em;
+    //   min-height: 100% !important;
+    //   background-color: currentcolor;
+    //   opacity: 0.25;
+    // }
+
+    .contact-header h1,
+    h6,
+    h3,
+    p {
+      color: #fff;
+    }
+
+    .contact-form {
+      .user-type-checks {
+        margin-bottom: 1rem;
+      }
+      .form-check-label {
+        color: #fff;
+      }
+      .horizontal-divider.contact {
+        width: 100%;
+        margin: 2rem 0;
+      }
+    }
+
+    .contact-person-container {
+      .contact-person {
+        .horizontal-divider {
+          margin: 1rem 0;
+          width: 100%;
+        }
+
+        .go-btn {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+      .contact-profile {
+        .support-lead {
+          width: 100%;
+          display: flex;
+          column-gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// mobile screen size
+@media only screen and (max-width: 768px) {
+  .main {
+    overflow-x: hidden;
+
+    .main-contents{
+      width: 100%;
+      margin: auto;
+    }
+  }
+
+  .stats{
+    border: 2px solid red;
   }
 }

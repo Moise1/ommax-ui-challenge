@@ -4,17 +4,17 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "react-bootstrap/Image";
 import Logo from "../assets/Logo.png";
-import '../styles/menu.scss';
+import "../styles/menu.scss";
 
 export const Menu = () => {
   return (
-    <Navbar bg="white" expand="lg" sticky="top" className="menu">
+    <Navbar bg="white" expand="lg" sticky="top" className="menu d-lg-flex">
       <Container>
         <Navbar.Brand href="#home">
           <Image src={Logo} />
         </Navbar.Brand>
         <div className="vr"></div>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        <Navbar.Toggle  aria-controls="responsive-navbar-nav" className="menu-burger"/>
         <Navbar.Collapse id="basic-navbar-nav" className="ml-5 menu-links">
           <Nav className="me-auto">
             <NavDropdown title="Quick Facts" id="basic-nav-dropdown">
@@ -32,6 +32,5 @@ export const Menu = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    
   );
 };

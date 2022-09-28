@@ -4,6 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
+import Form from "react-bootstrap/Form";
+import Stack from "react-bootstrap/Stack";
 
 import partners from "../assets/partners.png";
 import customsAgent from "../assets/customs-agent.png";
@@ -15,6 +17,7 @@ import coverage from "../assets/coverage.png";
 import innovation from "../assets/innovation.png";
 import ship from "../assets/ship.png";
 import customsOffice from "../assets/customs-office.png";
+import michealDoe from "../assets/micheal-doe.png";
 
 import "../styles/main.scss";
 
@@ -23,7 +26,7 @@ export const Main = () => {
     <>
       <Container fluid className="main">
         <Row className="main-contents">
-          <Col className="left-section">
+          <Col className="left-section" lg={6} md={6} xs={12}>
             <div>
               <h1 className="main-title">
                 Headache on complex customs matters for your business?
@@ -40,7 +43,7 @@ export const Main = () => {
               Get your qoute now
             </Button>
           </Col>
-          <Col className="right-section">
+          <Col className="right-section" lg={6} md={6 }xs={12}>
             <ul className="advantages-list">
               <li>Fast and accurate customs clearance delivery</li>
               <li>EU-wide customs coverage</li>
@@ -225,6 +228,12 @@ export const Main = () => {
                       physical inspection and duty management.
                     </p>
                   </div>
+                  <a href="#">
+                    Learn more{" "}
+                    <span>
+                      <i className="fa-regular fa-chevron-right" />
+                    </span>
+                  </a>
                 </Col>
 
                 <Col className="carousel-col">
@@ -241,6 +250,12 @@ export const Main = () => {
                       physical inspection and duty management.
                     </p>
                   </div>
+                  <a href="#">
+                    Learn more{" "}
+                    <span>
+                      <i className="fa-regular fa-chevron-right" />
+                    </span>
+                  </a>
                 </Col>
 
                 <Col className="carousel-col">
@@ -256,11 +271,162 @@ export const Main = () => {
                       goods, accompanied by the correct transit documents..
                     </p>
                   </div>
+                  <a href="#">
+                    Learn more{" "}
+                    <span>
+                      <i className="fa-regular fa-chevron-right" />
+                    </span>
+                  </a>
                 </Col>
               </Row>
             </Container>
           </Carousel.Item>
         </Carousel>
+      </div>
+
+      <div className="customs-clearance">
+        <div className="brexit-info">
+          <h1>Customs clearance after Brexit</h1>
+          <div className="horizontal-divider"></div>
+
+          <p>
+            Since 4 years we are successfully helping our customers to prepare
+            their business for Brexit. Our Bexit customs agents are always
+            up-to-date with the latest customs regulations after Brexit and look
+            forward to support you with Brexit customs procedures.
+          </p>
+
+          <Button className="brexit-btn">Brexit and customs: get ready!</Button>
+        </div>
+      </div>
+
+      <div className="contact-us">
+        <Container className="contact-grid-container">
+          <Row>
+            <Col lg={8} xs={6}>
+              <div className="contact-header">
+                <h1>Customs Support - Take the load off your mind</h1>
+
+                <div className="horizontal-divider"></div>
+
+                <p>
+                  <strong>
+                    Get in touch with one of our customs experts!{" "}
+                  </strong>
+                </p>
+                <p>
+                  Fill in the contact form or use the chat function on the
+                  website
+                </p>
+              </div>
+
+              <div className="contact-form">
+                <p>
+                  <strong>Are you a new or returning customer? *</strong>
+                </p>
+                <Form>
+                  <Stack direction="horizontal" gap={5} className="user-type-checks">
+                    <Form.Check type="radio" label="New" />
+                    <Form.Check type="radio" label="Returning" />
+                  </Stack>
+
+                  <Form.Group className="mb-3">
+                    <Form.Select>
+                      <option>Choice of service *</option>
+                    </Form.Select>
+                  </Form.Group>
+
+                  <div className="horizontal-divider contact"></div>
+
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridFirstname">
+                      <Form.Control type="text" placeholder="First name *" />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridLastname">
+                      <Form.Control type="text" placeholder="Last name *" />
+                    </Form.Group>
+                  </Row>
+
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridCompany">
+                      <Form.Control type="text" placeholder="Company" />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridEmail">
+                      <Form.Control type="email" placeholder="E-mail *" />
+                    </Form.Group>
+                  </Row>
+
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridPhoneNumber">
+                      <Form.Control type="text" placeholder="Phone number *" />
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridCountry">
+                      <Form.Select>
+                        <option>Country *</option>
+                      </Form.Select>
+                    </Form.Group>
+                  </Row>
+
+                  <Row className="mb-3">
+                    <Col>
+                      {" "}
+                      <Form.Check
+                        type="radio"
+                        label="I agree with the Terms and Conditions * "
+                      />
+                    </Col>
+
+                    <Col>
+                      {" "}
+                      <Form.Check
+                        type="radio"
+                        label="I want to sign up for the newsletter"
+                      />
+                    </Col>
+                  </Row>
+                </Form>
+              </div>
+            </Col>
+            {/* <div className="vr"></div> */}
+            <Col lg={4} xs={6} className="contact-person-container">
+              <Form className="contact-person">
+                <p>
+                  <strong>You prefer a personal contact?</strong>
+                </p>
+                <p>Please find the phone numbers of our locations below.</p>
+
+                <Form.Group controlId="formGridService" className="mb-3">
+                  <Form.Select>
+                    <option>Choice of service*</option>
+                  </Form.Select>
+                </Form.Group>
+
+                <Form.Group controlId="formGridGo" className="mx-auto">
+                  <Button className="go-btn">Go</Button>
+                </Form.Group>
+                <div className="horizontal-divider"></div>
+              </Form>
+
+              <div className="contact-profile">
+                <h3>„Let’s grow together!“</h3>
+
+                <div className="support-lead">
+                  <Image src={michealDoe} />
+                  <div className="details">
+                    <h6>
+                      <strong>Micheal Doe</strong>
+                    </h6>
+                    <p>Customer Support Lead</p>
+                    <p>CSG</p>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </>
   );
