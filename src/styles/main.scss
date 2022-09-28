@@ -1,30 +1,129 @@
 // Destkop styles
 
+.horizontal-divider {
+  background: #01a4b7;
+  border: 20px;
+  height: 3px;
+  width: 50px;
+}
+
 .main {
-  border: 2px solid blue !important;
-  background: url("../assets/Gruppe maskieren 1.png") center center no-repeat;
+  background: url("../assets/banner.png") center center no-repeat;
   background-size: cover;
   height: 690px;
 
   .main-contents {
-    margin-top: 5rem;
+    margin: auto 5rem 0 5rem;
+    .left-section,
+    .right-section {
+      margin-top: 15rem;
+    }
+    .main-title {
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .main-subtitle {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .quote-btn {
+      background: #1bd3c8;
+      color: #fff;
+      transition: transform 0.2s;
+      &:hover {
+        background: #0d716b;
+        transform: scale(1.1);
+      }
+    }
+
+    .advantages-list {
+      list-style-type: none;
+      li {
+        color: #fff;
+        font-size: 20px;
+        &:before {
+          content: "\2714\0020";
+          color: #1bd3c8;
+        }
+      }
+    }
   }
-  .main-title {
+}
+
+.partners-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.partners-description {
+  margin-top: 1rem;
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.stats-container {
+  background: #006b6e;
+  margin-top: 2rem;
+  padding: 1rem 0;
+
+  .stats-title {
     color: #fff;
-    font-size: 40px;
-    font-family: 'IBM Plex Sans';
+    font-size: 30px;
     font-weight: bold;
+    margin: 2rem 0 1rem 0 !important;
+    text-align: center;
   }
-
   .horizontal-divider {
-    background:#01a4b7;
-    border: 20px;
-    height: 3px;
-    width: 50px;
-
+    margin: 0 auto;
   }
-  .main-subtitle {
-    color: #fff;
-    font-size: 16px;
+
+  .stats {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    h1,
+    p {
+      color: #fff;
+    }
+
+    .experience,
+    .qualifed-customs,
+    .locations,
+    .countries {
+      font-weight: 900;
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .action-btn {
+    text-align: center;
+    margin-top: 4rem;
+    .in-touch-btn {
+      background: #1bd3c8;
+      color: #fff;
+    }
+  }
+}
+
+.costoms-records-container {
+  border: 2px solid red;
+  .records-row .records-col {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .customs-agent{
+    border: 2px solid green;
+    // width: 200px;
+
   }
 }
