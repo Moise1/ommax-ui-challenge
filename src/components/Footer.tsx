@@ -11,11 +11,19 @@ export const Footer = () => {
         <Row className="row">
           <Col className="d-xl-flex mx-2">
             <Nav className="flex-xl-row flex-column">
-              <Nav.Link className="footer-link">Imprint</Nav.Link>
-              <Nav.Link className="footer-link">Data Security</Nav.Link>
-              <Nav.Link className="footer-link">Conditions</Nav.Link>
-              <Nav.Link className="footer-link">Cookies</Nav.Link>
-              <Nav.Link className="footer-link">Customs Support</Nav.Link>
+              <Nav.Link className="footer-link mb-3">Imprint</Nav.Link>
+              <div className="horizontal-divider d-xl-none"></div>
+
+              <Nav.Link className="footer-link mb-3">Data Security</Nav.Link>
+              <div className="horizontal-divider d-xl-none"></div>
+
+              <Nav.Link className="footer-link mb-3">Conditions</Nav.Link>
+              <div className="horizontal-divider d-xl-none"></div>
+
+              <Nav.Link className="footer-link mb-3">Cookies</Nav.Link>
+              <div className="horizontal-divider d-xl-none"></div>
+
+              <Nav.Link className="footer-link mb-3">Customs Support</Nav.Link>
             </Nav>
           </Col>
 
