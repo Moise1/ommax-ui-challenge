@@ -7,10 +7,24 @@
   width: 50px;
 }
 
-.in-touch-btn {
-  border: #1bd3c8;
-  background: #1bd3c8 !important;
+.in-touch-btn,
+.go-btn,
+.brexit-btn {
+  border: #01a4b7 !important;
+  background: #01a4b7 !important;
   color: #fff;
+}
+
+.quote-btn,
+.quote-btn.mobile {
+  background: #01a4b7 !important;
+  border: #01a4b7 !important;
+  color: #fff;
+  transition: transform 0.2s;
+  &:hover {
+    background: #0d716b;
+    transform: scale(1.1);
+  }
 }
 
 .main {
@@ -35,17 +49,6 @@
       font-size: 16px;
     }
 
-    .quote-btn {
-      background: #1bd3c8 !important;
-      border: #1bd3c8;
-      color: #fff;
-      transition: transform 0.2s;
-      &:hover {
-        background: #0d716b;
-        transform: scale(1.1);
-      }
-    }
-
     .advantages-list {
       list-style-type: none;
       li {
@@ -53,7 +56,7 @@
         font-size: 20px;
         &:before {
           content: "\2714\0020";
-          color: #1bd3c8;
+          color: #01a4b7;
         }
       }
     }
@@ -91,23 +94,20 @@
     margin-top: 5rem;
     display: flex;
     justify-content: space-evenly;
-
     h1,
     p {
       color: #fff;
     }
 
-    .experience,
-    .qualifed-customs,
-    .locations,
-    .countries {
-      font-weight: 900;
+    .stats-item {
       h1 {
-        font-size: 50px;
+        font-size: 60px;
+        font-weight: bold;
       }
 
       p {
-        font-size: 20px;
+        font-size: 25px;
+        font-weight: bold;
       }
     }
   }
@@ -237,20 +237,6 @@
   .contact-grid-container {
     padding-top: 2rem;
 
-    // .vr{
-    //   transform: rotate(90deg);
-    //   background: #01a4b7;
-    //   border: 20px;
-    //   height: 3px !important;
-    //   width: 50px;
-    //   display: inline-block;
-    //   align-self: stretch;
-    //   width: 1em;
-    //   min-height: 100% !important;
-    //   background-color: currentcolor;
-    //   opacity: 0.25;
-    // }
-
     .contact-header h1,
     h6,
     h3,
@@ -272,7 +258,7 @@
     }
 
     .contact-person-container {
-      .contact-person {
+      .contact-person-form {
         .horizontal-divider {
           margin: 1rem 0;
           width: 100%;
@@ -296,16 +282,77 @@
 
 // mobile screen size
 @media only screen and (max-width: 576px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+    .navbar-nav {
+      align-items: center;
+    }
+  }
+  .quote-btn.mobile {
+    position: fixed;
+    z-index: 1;
+    bottom: 3%;
+    left: 20%;
+    width: 60%;
+  }
   .main {
+    mask-image: -webkit-gradient(
+      linear,
+      right top,
+      right bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(rgba(27, 211, 200, 0.6))
+    );
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      right top,
+      right bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(rgba(27, 211, 200, 0.6))
+    );
     .main-contents {
       width: 100%;
       margin: auto;
+      display: block;
+      height: 100%;
+      overflow-y: scroll;
+      .horizontal-divider.mobile {
+        height: 1px !important;
+        background: #000 !important;
+      }
+
+      .right-section {
+        margin-top: 1%;
+      }
     }
   }
 
-  .stats{
-    flex-direction: column;
-    margin: 0 auto;
+  .partners .partner-img {
+    background: gray;
+  }
+
+  .stats-container {
+    .stats {
+      flex-direction: column;
+      margin: 0 auto;
+      .horizontal-divider {
+        background: rgba(219, 215, 215, 0.4) !important;
+        height: 1px;
+        width: 68%;
+      }
+      .stats-item {
+        text-align: center;
+      }
+    }
+    .in-touch-btn {
+      width: 70%;
+      padding: 10px 0;
+    }
+  }
+  .mobile-screen-carousel {
+    .carousel-indicators {
+      bottom: -30%;
+    }
   }
   .customs-clearance {
     .brexit-info {
@@ -316,9 +363,20 @@
       top: 40%;
     }
   }
-  
-  .customs-agent{
-    object-fit: contain;
 
+  .customs-agent {
+    object-fit: contain;
+  }
+
+  .support-lead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .details {
+      text-align: center;
+    }
+  }
+  .contact-person-form .horizontal-divider {
+    height: 1px;
   }
 }

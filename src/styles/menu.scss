@@ -3,10 +3,23 @@
 .menu-links {
   margin-left: 2rem;
 }
-
-@media only screen and (max-width: 768px){
-  
-  .menu-burger{
-    background: #1bd3c8;
+// mobile screen size
+@media only screen and (max-width: 576px) {
+  .horizontal-divider.mobile{
+    background: rgba(175, 171, 171, 0.4) !important;
+    height: 1px;
+    width: 90%;
+  }
+  .navbar-toggler {
+    margin-right: 20px;
+    color: none !important;
+    border: none !important;
+    outline: none !important;
+    &:focus,
+    &:active,
+    &-icon:focus {
+      outline: none !important;
+      box-shadow: none !important; 
+    }
   }
 }

@@ -23,10 +23,10 @@ import "../styles/main.scss";
 
 export const Main = () => {
   return (
-    <>
+    <main className="main-container">
       <Container fluid className="main">
         <Row className="main-contents">
-          <Col className="left-section" lg={6} md={6} xs={12}>
+          <Col className="left-section">
             <div>
               <h1 className="main-title">
                 Headache on complex customs matters for your business?
@@ -39,11 +39,12 @@ export const Main = () => {
                 off your mind!
               </p>
             </div>
-            <Button className="quote-btn" size="lg">
+            <Button className="quote-btn d-none d-xl-block" size="lg">
               Get your qoute now
             </Button>
           </Col>
-          <Col className="right-section" lg={6} md={6 }xs={12}>
+          <div className="horizontal-divider mobile d-lg-none"></div>
+          <Col className="right-section">
             <ul className="advantages-list">
               <li>Fast and accurate customs clearance delivery</li>
               <li>EU-wide customs coverage</li>
@@ -52,11 +53,14 @@ export const Main = () => {
           </Col>
         </Row>
       </Container>
+      <Button className="quote-btn mobile d-xl-none" size="lg">
+        Get your qoute now
+      </Button>
 
-      <Container className="partners-container mt-5">
-        <Row className="parnters">
+      <Container className="partners-container mt-5 px-1">
+        <Row className="partners">
           <Col>
-            <Image src={partners} />
+            <Image src={partners} className="partners-img" />
           </Col>
           <Col>
             <h1 className="partners-title">Who we work with</h1>
@@ -72,34 +76,37 @@ export const Main = () => {
         </Row>
       </Container>
 
-      <div className="stats-container">
+      <div className="stats-container mx-1">
         <h1 className="stats-title">
           The leading customs agent in Europe and UK
         </h1>
         <div className="horizontal-divider"></div>
 
-        <div className="stats">
-          <div className="experience">
+        <div className="stats d-block d-lg-flex">
+          <div className="stats-item">
             <h1>20 + </h1>
             <p>years of experience</p>
           </div>
           <div className="vr"></div>
+          <div className="horizontal-divider d-lg-none"></div>
 
-          <div className="quolified-customs">
+          <div className="stats-item">
             <h1>4000 </h1>
             <p>qualified customs specialists</p>
           </div>
 
           <div className="vr"></div>
+          <div className="horizontal-divider d-lg-none"></div>
 
-          <div className="locations">
+          <div className="stats-item">
             <h1>20</h1>
             <p>strategic locations</p>
           </div>
 
           <div className="vr"></div>
+          <div className="horizontal-divider d-lg-none"></div>
 
-          <div className="countries">
+          <div className="stats-item">
             <h1>5</h1>
             <p>countries</p>
           </div>
@@ -132,7 +139,7 @@ export const Main = () => {
 
         <Container fluid className="second-records-container">
           <Row className="records-row">
-            <Col className="records-col text">
+            <Col className="records-col text order-last order-xl-first">
               <h1>Lorem ipsum dolor sit amet</h1>
               <div className="horizontal-divider"></div>
               <p>
@@ -153,6 +160,7 @@ export const Main = () => {
         </Container>
       </div>
 
+      {/* offers area  */}
       <div className="offers-main-container">
         <Container fluid>
           <Row className="call-action">
@@ -163,7 +171,7 @@ export const Main = () => {
               </h1>
             </Col>
             <Col lg={2} xs={12}>
-              <Button className="in-touch-btn" size="lg">
+              <Button className="in-touch-btn d-none" size="lg">
                 Get in touch
               </Button>
             </Col>
@@ -171,7 +179,41 @@ export const Main = () => {
           <div className="horizontal-divider"></div>
         </Container>
 
-        <Container>
+        <div className="mobile-screen-carousel d-lg-none mt-5">
+          <Carousel variant="dark" className="text-center">
+            <Carousel.Item>
+              <Image src={accuracy} />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <Image src={compliance} />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <Image src={professionals} />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <Image src={online} />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <Image src={coverage} />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <Image src={innovation} />
+            </Carousel.Item>
+          </Carousel>
+
+          <div className="action-btn-container text-center mt-4">
+            <Button className="in-touch-btn mt-3 w-50" size="lg">
+              Get in touch
+            </Button>
+          </div>
+        </div>
+
+        <Container className="d-none">
           <Row>
             <Col>
               <Image src={accuracy} />
@@ -284,6 +326,7 @@ export const Main = () => {
         </Carousel>
       </div>
 
+      {/* customs clearance area */}
       <div className="customs-clearance">
         <div className="brexit-info">
           <h1>Customs clearance after Brexit</h1>
@@ -325,7 +368,11 @@ export const Main = () => {
                   <strong>Are you a new or returning customer? *</strong>
                 </p>
                 <Form>
-                  <Stack direction="horizontal" gap={5} className="user-type-checks">
+                  <Stack
+                    direction="horizontal"
+                    gap={5}
+                    className="user-type-checks"
+                  >
                     <Form.Check type="radio" label="New" />
                     <Form.Check type="radio" label="Returning" />
                   </Stack>
@@ -390,9 +437,9 @@ export const Main = () => {
                 </Form>
               </div>
             </Col>
-            {/* <div className="vr"></div> */}
+
             <Col lg={4} xs={12} className="contact-person-container">
-              <Form className="contact-person">
+              <Form className="contact-person-form">
                 <p>
                   <strong>You prefer a personal contact?</strong>
                 </p>
@@ -411,7 +458,7 @@ export const Main = () => {
               </Form>
 
               <div className="contact-profile">
-                <h3>„Let’s grow together!“</h3>
+                <h3 className="text-center">„Let’s grow together!“</h3>
 
                 <div className="support-lead">
                   <Image src={michealDoe} />
@@ -428,6 +475,6 @@ export const Main = () => {
           </Row>
         </Container>
       </div>
-    </>
+    </main>
   );
 };

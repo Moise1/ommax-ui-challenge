@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="footer">
       <Container className="container">
         <Row className="row">
-          <Col className="d-flex mx-2" lg={7} >
+          <Col className="d-lg-flex mx-2">
             <Nav>
               <Nav.Link className="footer-link">Imprint</Nav.Link>
               <Nav.Link className="footer-link">Data Security</Nav.Link>
@@ -19,7 +19,7 @@ export const Footer = () => {
             </Nav>
           </Col>
 
-          <Col lg={4}>
+          <Col className="d-none d-xl-block">
             <span>
               &copy;{new Date().getFullYear()} Customs Support Group. All Rights
               Reserved.
