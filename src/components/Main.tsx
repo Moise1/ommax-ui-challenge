@@ -40,7 +40,7 @@ export const Main = () => {
               </p>
             </div>
             <Button className="quote-btn d-none d-xl-block" size="lg">
-              Get your qoute now
+              Get your quote now
             </Button>
           </Col>
           <div className="horizontal-divider mobile d-lg-none"></div>
@@ -54,7 +54,7 @@ export const Main = () => {
         </Row>
       </Container>
       <Button className="quote-btn mobile d-xl-none" size="lg">
-        Get your qoute now
+        Get your quote now
       </Button>
 
       <Container className="partners-container mt-5 px-1">
@@ -252,76 +252,71 @@ export const Main = () => {
           <div className="horizontal-divider"></div>
         </div>
 
-        <Carousel className="carousel">
-          <Carousel.Item>
-            <Container>
-              <Row>
-                <Col className="carousel-col">
-                  <Image src={customsOffice} />
+        <Carousel className="clearance-carousel w-100" variant="dark">
+          <Carousel.Item className="clearance-carousel-item">
+            <Image src={customsOffice} />
 
-                  <div className="description">
-                    <h1>Import customs clearance</h1>
-                    <p>
-                      If you would like to import goods from a third country to
-                      within the European Union, Customs Support assists you in
-                      every step of the customs clearance process. Our customs
-                      experts take care of import documents, classification of
-                      import goods with the correct HS code, coordination of
-                      physical inspection and duty management.
-                    </p>
-                  </div>
-                  <a href="#">
-                    Learn more{" "}
-                    <span>
-                      <i className="fa-regular fa-chevron-right" />
-                    </span>
-                  </a>
-                </Col>
+            <div className="description">
+              <p>Import customs clearance</p>
+              <p>
+                If you would like to import goods from a third country to within
+                the European Union, Customs Support assists you in every step of
+                the customs clearance process. Our customs experts take care of
+                import documents, classification of import goods with the
+                correct HS code, coordination of physical inspection and duty
+                management.
+              </p>
 
-                <Col className="carousel-col">
-                  <Image src={customsOffice} />
+              <a href="#">
+                Learn more{" "}
+                <span>
+                  <i className="fa-regular fa-chevron-right" />
+                </span>
+              </a>
+            </div>
+          </Carousel.Item>
 
-                  <div className="description">
-                    <h1>Export customs clearance</h1>
-                    <p>
-                      If you would like to export goods from a third country to
-                      within the European Union, Customs Support assists you in
-                      every step of the customs clearance process. Our customs
-                      experts take care of export documents, classification of
-                      export goods with the correct HS code, coordination of
-                      physical inspection and duty management.
-                    </p>
-                  </div>
-                  <a href="#">
-                    Learn more{" "}
-                    <span>
-                      <i className="fa-regular fa-chevron-right" />
-                    </span>
-                  </a>
-                </Col>
+          <Carousel.Item className="clearance-carousel-item">
+            <Image src={customsOffice} />
 
-                <Col className="carousel-col">
-                  <Image src={customsOffice} />
+            <div className="description">
+              <p>Export customs clearance</p>
+              <p>
+                If you would like to export goods from a third country to within
+                the European Union, Customs Support assists you in every step of
+                the customs clearance process. Our customs experts take care of
+                export documents, classification of export goods with the
+                correct HS code, coordination of physical inspection and duty
+                management.
+              </p>
+              <a href="#">
+                Learn more{" "}
+                <span>
+                  <i className="fa-regular fa-chevron-right" />
+                </span>
+              </a>
+            </div>
+          </Carousel.Item>
 
-                  <div className="description">
-                    <h1>Customs transit procedures</h1>
-                    <p>
-                      We assist you in all requirements for different types of
-                      transit procedures and ensure the correct handling of
-                      customs clearance. Our customs experts take care of T1
-                      transit declarations and arrange the transport of the
-                      goods, accompanied by the correct transit documents..
-                    </p>
-                  </div>
-                  <a href="#">
-                    Learn more{" "}
-                    <span>
-                      <i className="fa-regular fa-chevron-right" />
-                    </span>
-                  </a>
-                </Col>
-              </Row>
-            </Container>
+          <Carousel.Item className="clearance-carousel-item">
+            <Image src={customsOffice} />
+
+            <div className="description">
+              <p>Customs transit procedures</p>
+              <p>
+                We assist you in all requirements for different types of transit
+                procedures and ensure the correct handling of customs clearance.
+                Our customs experts take care of T1 transit declarations and
+                arrange the transport of the goods, accompanied by the correct
+                transit documents..
+              </p>
+              <a href="#">
+                Learn more{" "}
+                <span>
+                  <i className="fa-regular fa-chevron-right" />
+                </span>
+              </a>
+            </div>
           </Carousel.Item>
         </Carousel>
       </div>

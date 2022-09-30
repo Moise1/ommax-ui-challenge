@@ -179,20 +179,13 @@
     }
   }
 
-  .carousel-col {
-    a {
-      text-decoration: none;
-      color: #1bd3c8;
-    }
-    .description {
-      margin-top: 1rem;
-      h1 {
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      p {
-        font-size: 16px;
+  .clearance-carousel-item{
+    text-align: center;
+    .description{
+      width: 25%;
+      margin: 0 auto;
+      p:first-child{
+        font-weight: bold
       }
     }
   }
@@ -331,6 +324,7 @@
     background: gray;
   }
 
+
   .stats-container {
     .stats {
       flex-direction: column;
@@ -348,6 +342,10 @@
       width: 70%;
       padding: 10px 0;
     }
+  }
+  .clearance-carousel-item .description{
+    width: 100% !important;
+    
   }
   .mobile-screen-carousel {
     .carousel-indicators {
